@@ -1,9 +1,0 @@
-apiVersion: triggers.tekton.dev/v1alpha1
-kind: EventListener
-metadata:
-  name: first-ms-dev-eventlistener
-  namespace: first-ms-dev
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: first-ms-dev-trigger
