@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: first-ms-dev
+  name: first-ms-int
   namespace: openshift-gitops
 spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: default
+  project: int-environment
   source:
     directory:
       recurse: true
     path: first-ms/jkube/
-    repoURL: https://github.com/kevbrain/ocp-gitops-apps-deploy.git
+    repoURL: https://github.com/kevbrain/ocp-gitops-apps-deploy-int.git
     targetRevision: main
   syncPolicy: {}
